@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Docenti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestione Docenti</h1>
+    
+    <section>
+        <h2>Nome docente</h2>
+        <input type="text" id="nomeDocente" placeholder="Inserisci nome docente">
+        <button onclick="aggiungiDocente()">Aggiungi docente</button>
+    </section>
+    
+    <section>
+        <h2>Calendario</h2>
+        <label for="selezionaDocente">Seleziona un docente:</label>
+        <select id="selezionaDocente"></select>
+        
+        <label for="giornoSettimana">Giorno della settimana:</label>
+        <select id="giornoSettimana">
+            <option value="Lunedì">Lunedì</option>
+            <option value="Martedì">Martedì</option>
+            <option value="Mercoledì">Mercoledì</option>
+            <option value="Giovedì">Giovedì</option>
+            <option value="Venerdì">Venerdì</option>
+            <option value="Sabato">Sabato</option>
+        </select>
+        
+        <input type="text" id="orario" placeholder="Inserisci orario (HH:MM-HH:MM)">
+        <input type="text" id="aula" placeholder="Inserisci aula">
+        <button onclick="aggiungiOrario()">Aggiungi orario</button>
+    </section>
+    
+    <section>
+        <h2>Aula</h2>
+        <p id="posizioneDocente">Seleziona un docente per vedere dove si trova</p>
+    </section>
+    
+    <section>
+        <h2>Gestione Elenchi</h2>
+        <button onclick="salvaElenco()">Salva elenco</button>
+        <label for="elenchiSalvati">Seleziona un elenco salvato:</label>
+        <select id="elenchiSalvati"></select>
+        <button onclick="caricaElenco()">Carica elenco</button>
+        <button onclick="eliminaElenco()">Elimina elenco</button>
+        <button onclick="visualizzaCalendario()">Visualizza Calendario</button>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
