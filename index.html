@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Docenti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestione Docenti</h1>
+
+    <!-- Sezione per aggiungere un docente -->
+    <div id="aggiungiDocente">
+        <h2>Aggiungi Docente</h2>
+        <input type="text" id="nomeDocente" placeholder="Nome docente">
+        <button id="aggiungiDocente">Aggiungi Docente</button>
+    </div>
+
+    <!-- Sezione Calendario -->
+    <div id="calendario">
+        <h2>Calendario</h2>
+        <label for="selezionaDocente">Seleziona un docente:</label>
+        <select id="selezionaDocente">
+            <option value="">Seleziona un docente</option>
+        </select>
+
+        <label for="giornoSettimana">Giorno della settimana:</label>
+        <select id="giornoSettimana">
+            <option value="lunedì">Lunedì</option>
+            <option value="martedì">Martedì</option>
+            <option value="mercoledì">Mercoledì</option>
+            <option value="giovedì">Giovedì</option>
+            <option value="venerdì">Venerdì</option>
+        </select>
+
+        <label for="orarioInizio">Orario inizio:</label>
+        <input type="time" id="orarioInizio">
+
+        <label for="orarioFine">Orario fine:</label>
+        <input type="time" id="orarioFine">
+
+        <label for="aula">Aula:</label>
+        <input type="text" id="aula" placeholder="Inserisci aula">
+
+        <button id="aggiungiOrario">Aggiungi Orario</button>
+    </div>
+
+    <!-- Sezione Aula -->
+    <div id="aula">
+        <h2>Aula</h2>
+        <p id="infoAula">Seleziona un docente per vedere dove si trova</p>
+    </div>
+
+    <!-- Sezione per salvare e caricare elenchi -->
+    <div id="salvaCarica">
+        <button id="salvaElenco">Salva elenco</button>
+        <label for="elencoSalvato">Seleziona un elenco salvato:</label>
+        <select id="elencoSalvato">
+            <option value="">Seleziona un elenco</option>
+        </select>
+
+        <button id="caricaElenco">Carica Elenco</button>
+        <button id="eliminaElenco">Elimina Elenco</button>
+    </div>
+
+    <!-- Sezione per visualizzare il calendario -->
+    <div id="visualizzaCalendario">
+        <button id="visualizzaCalendario">Visualizza Calendario</button>
+    </div>
+
+    <!-- Finestra di calendario per il docente selezionato -->
+    <div id="calendarioDocente" style="display:none;">
+        <h2>Calendario del docente</h2>
+        <div id="calendarioInfo"></div>
+        <button id="nascondiCalendario">Nascondi calendario</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
